@@ -1,0 +1,18 @@
+body{
+  width: 100%;
+  background: url("../pics/arashiyama.jpg");
+  background-size: cover;
+  background-repeat:no-repeat;
+ font-family: 'Enriqueta', arial, serif;
+}
+
+.name{
+  color: white;
+  position: absolute;
+  top: 25%;
+  left: 43%;
+
+  font-weight: bold;
+
+
+}
