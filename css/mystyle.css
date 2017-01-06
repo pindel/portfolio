@@ -1,0 +1,109 @@
+* {
+    box-sizing: border-box;
+}
+
+
+body, html{
+ height: 100%;
+ font-family: "Lato", sans-serif;
+}
+img{
+  height: auto;
+  width: auto;
+  max-width: 300px;
+  max-height: 300px;
+  margin-left: 50%;
+}
+
+/*responsive stuff */
+.row::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+}
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    [class*="col-"] {
+        width: 100%;
+    }
+
+
+}
+
+@media only screen and (min-width: 768px) {
+
+.col-resize{width: 50%;}
+.col-aboutMe{width: 25%;}
+}
+
+
+.parallax {
+    /* The image used */
+    background: url("../pics/arashiyama.jpg");
+
+    /* Set a specific height */
+     height: 100%;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Turn off parallax scrolling for tablets and phones. Increase the pixels if needed */
+@media only screen and (max-device-width: 1024px) {
+  .parallax {
+      background-attachment: scroll;
+  }
+}
+
+
+.col-name{
+  color: black;
+  position: absolute;
+  top: 25%;
+  left: 43%;
+  background-color: #ffffff;
+   border: 1px solid black;
+   opacity: 0.6;
+  font-weight: bold;
+
+
+}
+
+/* Remove margins and padding from the list, and add a black background color */
+ul.topnav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: black;
+    opacity:0.8;
+}
+
+/* Float the list items side by side */
+ul.topnav li {float: left;}
+
+/* Style the links inside the list items */
+ul.topnav li a {
+    display: inline-block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+/* Change background color of links on hover */
+ul.topnav li a:hover {background-color: #555;}
+
+/* Hide the list item that contains the link that should open and close the topnav on small screens */
+ul.topnav li.icon {display: none;}
