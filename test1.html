@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html>
+<title>John Pindel</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
+body, html {
+    height: 100%;
+    color: #777;
+    line-height: 1.8;
+}
+
+/* Create a Parallax Effect */
+.bgimg-1, .bgimg-2, .bgimg-3 {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* First image (Logo. Full height) */
+.bgimg-1 {
+    background-image: url('imgs/arashiyama1.png');
+    min-height: 100%;
+}
+
+/* Second image (Portfolio) */
+.bgimg-2 {
+    background-image: url("imgs/arashiyama1.png");
+    min-height: 400px;
+}
+
+/* Third image (Contact) */
+.bgimg-3 {
+    background-image: url("/w3images/parallax3.jpg");
+    min-height: 400px;
+}
+
+.w3-wide {letter-spacing: 10px;}
+.w3-hover-opacity {cursor: pointer;}
+
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-device-width: 1024px) {
+    .bgimg-1, .bgimg-2, .bgimg-3 {
+        background-attachment: scroll;
+    }
+}
+
+.info, .info1,.info2,.info3,.info4,.info5,.info6 {
+  display: none;
+}
+</style>
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <ul class="w3-navbar" id="myNavbar">
+    <li class="w3-hide-medium w3-hide-large w3-opennav w3-right">
+      <a class="w3-hover-black" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+        <i class="fa fa-bars"></i>
+      </a>
+    </li>
+    <li class="w3-left-align"><a href="#home">HOME</a></li>
+    <li class="w3-hide-small"><a href="#about"><i class="fa fa-user"></i> ABOUT</a></li>
+    <li class="w3-hide-small"><a href="#portfolio"><i class="fa fa-th"></i> PORTFOLIO</a></li>
+    <li class="w3-hide-small"><a href="#contact"><i class="fa fa-envelope"></i> CONTACT</a></li>
+    <li class="w3-hide-small w3-right">
+      <a href="#" class="w3-hover-red">
+        <i class="fa fa-search"></i>
+      </a>
+    </li>
+  </ul>
+
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-hide w3-hide-large w3-hide-medium">
+    <ul class="w3-navbar w3-left-align w3-white">
+      <li><a href="#about" onclick="toggleFunction()">ABOUT</a></li>
+      <li><a href="#portfolio" onclick="toggleFunction()">PORTFOLIO</a></li>
+      <li><a href="#contact" onclick="toggleFunction()">CONTACT</a></li>
+      <li><a href="#">SEARCH</a></li>
+    </ul>
+  </div>
+</div>
+
+<!-- First Parallax Image with Logo Text -->
+<div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
+  <div class="w3-display-middle" style="white-space:nowrap;">
+    <span class="w3-center w3-padding-xlarge w3-black w3-xlarge w3-wide w3-animate-opacity">JOHN PINDEL</span>
+  </div>
+</div>
+
+<!-- Container (About Section) -->
+<div class="w3-content w3-container w3-padding-64" id="about">
+  <h3 class="w3-center">ABOUT ME</h3>
+ <!-- <p class="w3-center"><em>I love photography</em></p> -->
+  <p> Hi! I'm John. I am a web developer for Discover Financial Services. I mostly work in java writing business logic to connect our service calls to the back end to the front end. I have a lot of expirence writing and managing REST serveices to display
+infomation  on our consumer website and app. This involves testing in Postman as well as on all internet browsers and mobile operating systems. I also help maintain and update certain webapges on our consumer website. We often have to make U.I fixes for debuggs and to meet the
+business's ever growing needs. At Discover we work in a combination of lean and agile. I particapte in daily standups, sprint grooming, rally, as well demoing my projects to business owners.
+  </p>
+  <div class="w3-row">
+    <div class="w3-col m6 w3-center w3-padding-large">
+      <p><b><i class="fa fa-user w3-margin-right"></i>John Pindel</b></p><br>
+      <img src="imgs/me1_opt1.jpg" class="w3-round w3-image" alt="Photo of Me" width="200" height="106">
+    </div>
+
+    <!-- Hide this text on small devices -->
+    <div class="w3-col m6 w3-hide-small w3-padding-large">
+      <p>In my free time I learn things. I'm learning Japanese and guitar as hobbies. As well as deeloping this site when I have time. I also like to travel and learn about other culutres. To relax I like to read or play video games. </p>
+    </div>
+  </div>
+  <p class="w3-large w3-center w3-padding-16">Skills:</p>
+
+<!--  <p class="w3-wide"><i class="fa fa-camera"></i>Photography</p>
+  <div class="w3-progress-container">
+    <div class="w3-progressbar" style="width:90%"></div>
+  </div> -->
+
+  <p class="w3-wide"><i class="fa fa-book"></i>Education</p>
+  <ul class="w3-center w3-padding-16 w3-ul w3-card-4">
+    <li>Northern Illinois University 2012-2016</br>
+    Bachelor's of Science in Computer Science and Philosophy</li>
+  </ul>
+<p>Clubs & Activites</p>
+  <ul class="w3-center w3-padding-16 w3-ul w3-card-4">
+      <li>
+           Cognitive Science Club, Choir, E-sports Club
+  </ul>
+  <p>Awards</p>
+    <ul class="w3-center w3-padding-16 w3-ul w3-card-4">
+        <li>Cum Laude (3.5 or higher gpa)</li>
+        <li>Dean's List (Average 3.75gpa)</li>
+    </ul>
+  <p class="w3-wide"><i class="fa fa-laptop"></i>Software Developement</p>
+  <ul class="w3-center w3-padding-16 w3-ul w3-card-4">
+    <li>Java, C++, C#, Assembly, SQL, Spring Framework</li>
+    <li>Responsive Design, Html5, Css, JavaScript, Jquery, Freemarker, PHP, Json, Xml</li>
+    <li>J2EE, Tomcat, REST, SOAP</li>
+    <li>Github, Gradle, Jenkins</li>
+    <li>Angile & Lean methodology</li>
+  </ul>
+<!--  <div class="w3-progress-container">
+    <div class="w3-progressbar" style="width:85%"></div>
+  </div>-->
+<!--  <p class="w3-wide"><i class="fa fa-photo"></i>Photoshop</p>
+  <div class="w3-progress-container">
+    <div class="w3-progressbar" style="width:75%"></div>
+  </div> -->
+</div>
+
+<div class="w3-row w3-center w3-dark-grey w3-padding-16">
+<!--  <div class="w3-quarter w3-section">
+    <span class="w3-xlarge">14+</span><br>
+    Partners
+  </div>
+  <div class="w3-quarter w3-section">
+    <span class="w3-xlarge">55+</span><br>
+    Projects Done
+  </div>
+  <div class="w3-quarter w3-section">
+    <span class="w3-xlarge">89+</span><br>
+    Happy Clients
+  </div>
+  <div class="w3-quarter w3-section">
+    <span class="w3-xlarge">150+</span><br>
+    Meetings
+  </div>-->
+</div>
+
+<!-- Second Parallax Image with Portfolio Text -->
+<div class="bgimg-2 w3-display-container w3-opacity-min">
+  <div class="w3-display-middle">
+    <span class="w3-xxlarge w3-text-light-grey w3-wide">PORTFOLIO</span>
+  </div>
+</div>
+
+<!-- Container (Portfolio Section) -->
+<div class="w3-content w3-container w3-padding-64" id="portfolio">
+  <h3 class="w3-center">MY WORK EXPIRENCE</h3>
+  <p class="w3-center"><em>Here are some work examples.<br> Click to expand</em></p><br>
+
+  <ul class="w3-center w3-padding-20 w3-ul w3-card-4">
+      <li class="expand">Discover Deals Overhaul
+          <span class="info"></br>On Discover's website we have a "Deals" webpage. Here customers can redemm cash back bonus coupons.
+            I implemented an outsourced overhaul on this page.
+          </span>
+      </li>
+      <li class="expand1">Apple, Android & Walmart Pay  webpage updates
+          <span class="info1"></br>We have a webpage for each of our mobile wallets. I have been responsible for fixing bugs and maintaing these pages</span>
+      </li>
+      <li class="expand2">Account Center REST updates
+          <span class="info2"></br>I updated our REST service to reformat the information displayed on a customer's landing page.</span>
+      </li>
+    <!--  <li class="expand3">Walmart Pay Enhancements
+          <span class="info3"></br>sdfasdfasdfasdfasdfasdf</span>
+      </li>-->
+      <li class="expand4">ESQM tool
+          <span class="info4"></br>I created a tool to make conversions on test data to make our testing easier</span>
+      </li>
+      <li class="expand5">Mobile REST formatting
+          <span class="info5"></br>Reformented how customer's account info is displayed on our mobile app</span>
+      </li>
+      <li class="expand6">Amazon Logging Enhancements
+          <span class="info6"></br>Updated our Amazon logger from log4j to slf4j and made various imporvements on output</span>
+      </li>
+  </ul>
+
+
+  <!--  <button class="w3-btn w3-light-grey w3-padding-xlarge" style="margin-top:64px">LOAD MORE</button>-->
+  </div>
+</div>
+
+<!-- Modal for full size images on click
+<div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
+  <span class="w3-closebtn w3-text-white w3-opacity w3-hover-opacity-off w3-xxlarge w3-container w3-display-topright" title="Close Modal Image"><i class="fa fa-remove"></i></span>
+  <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+    <img id="img01" class="w3-image">
+    <p id="caption" class="w3-opacity w3-large"></p>
+  </div>
+</div>-->
+
+<!-- Third Parallax Image with Portfolio Text -->
+<div class="bgimg-3 w3-display-container w3-opacity-min">
+  <div class="w3-display-middle">
+     <span class="w3-xxlarge w3-text-light-grey w3-wide">CONTACT</span>
+  </div>
+</div>
+
+<!-- Container (Contact Section) -->
+<div class="w3-content w3-container w3-padding-64" id="contact">
+  <h3 class="w3-center">WHERE I WORK</h3>
+  <p class="w3-center"><em>I'd love your feedback!</em></p>
+
+  <div class="w3-row w3-padding-32 w3-section">
+    <div class="w3-col m4 w3-container">
+      <!-- Add Google Maps -->
+      <div id="googleMap" class="w3-round-large w3-greyscale" style="width:100%;height:400px;"></div>
+    </div>
+    <div class="w3-col m8 w3-container w3-section">
+      <div class="w3-large w3-margin-bottom">
+        <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Riverwoods, US<br>
+        <i class="fa fa-phone fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Phone: 630-797-0217<br>
+        <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Email: pindelgame@gmail.com<br>
+      </div>
+      <p>leave me a note:</p>
+      <form action="form.asp" target="_blank">
+        <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
+          <div class="w3-half">
+            <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
+          </div>
+          <div class="w3-half">
+            <input class="w3-input w3-border" type="text" placeholder="Email" required name="Email">
+          </div>
+        </div>
+        <input class="w3-input w3-border" type="text" placeholder="Message" required name="Message">
+        <button class="w3-btn w3-black w3-right w3-padding w3-section" type="submit">
+          <i class="fa fa-paper-plane"></i> SEND MESSAGE
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
+  <a href="#home" class="w3-btn w3-padding w3-light-grey w3-hover-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+  <div class="w3-xlarge w3-section">
+    <i class="fa fa-facebook-official w3-hover-text-indigo"></i>
+    <i class="fa fa-instagram w3-hover-text-purple"></i>
+    <i class="fa fa-snapchat w3-hover-text-yellow"></i>
+    <i class="fa fa-pinterest-p w3-hover-text-red"></i>
+    <i class="fa fa-twitter w3-hover-text-light-blue"></i>
+    <i class="fa fa-linkedin w3-hover-text-indigo"></i>
+  </div>
+
+</footer>
+
+<!-- Add Google Maps -->
+<script src="https://maps.googleapis.com/maps/api/js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script>
+<!-- Google Map Location -->
+var myCenter = new google.maps.LatLng(42.1567624,-87.8922984,17);
+
+function initialize() {
+var mapProp = {
+  center: myCenter,
+  zoom: 12,
+  scrollwheel: false,
+  draggable: false,
+  mapTypeId: google.maps.MapTypeId.ROADMAP
+  };
+
+var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+
+var marker = new google.maps.Marker({
+  position: myCenter,
+});
+
+marker.setMap(map);
+}
+
+google.maps.event.addDomListener(window, 'load', initialize);
+
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+
+// Change style of navbar on scroll
+window.onscroll = function() {myFunction()};
+function myFunction() {
+    var navbar = document.getElementById("myNavbar");
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        navbar.className = "w3-navbar" + " w3-card-2" + " w3-animate-top" + " w3-white";
+    } else {
+        navbar.className = navbar.className.replace(" w3-card-2 w3-animate-top w3-white", "");
+    }
+}
+
+// Used to toggle the menu on small screens when clicking on the menu button
+function toggleFunction() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+
+//expand work Portfolio items
+$(document).ready(function(){
+  $(".expand").click(function(){
+      $(".info").toggle();
+  });
+  $(".expand1").click(function(){
+      $(".info1").toggle();
+  });
+  $(".expand2").click(function(){
+      $(".info2").toggle();
+  });
+  $(".expand3").click(function(){
+      $(".info3").toggle();
+  });
+  $(".expand4").click(function(){
+      $(".info4").toggle();
+  });
+  $(".expand5").click(function(){
+      $(".info5").toggle();
+  });
+  $(".expand6").click(function(){
+      $(".info6").toggle();
+  });
+});
+</script>
+
+</body>
+</html>
