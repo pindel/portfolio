@@ -204,23 +204,22 @@ body, html {
       <div class="w3-large w3-margin-bottom">
         <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Riverwoods, US<br>
         <i class="fa fa-phone fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Phone: 630-797-0217<br>
-        <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Email: pindelgame@gmail.com<br>
+        <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Email: johnpindel@gmail.com<br>
       </div>
-      <p>leave me a note:</p>
-      <form action="form.asp" target="_blank">
+<!--      <form id="emailForm">
         <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
           <div class="w3-half">
-            <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
+            <input id= "theirName" class="w3-input w3-border" type="text" placeholder="Name">
           </div>
           <div class="w3-half">
-            <input class="w3-input w3-border" type="text" placeholder="Email" required name="Email">
+            <input class="w3-input w3-border" type="text" placeholder="Email">
           </div>
         </div>
-        <input class="w3-input w3-border" type="text" placeholder="Message" required name="Message">
-        <button class="w3-btn w3-black w3-right w3-padding w3-section" type="submit">
+        <input id="theirMessage" class="w3-input w3-border" type="text" placeholder="Message">
+        <button class="w3-btn w3-black w3-right w3-padding w3-section" id="sendEmail" value="click">
           <i class="fa fa-paper-plane"></i> SEND MESSAGE
         </button>
-      </form>
+      </form> --> 
     </div>
   </div>
 </div>
@@ -240,6 +239,17 @@ function onClick(element) {
   var captionText = document.getElementById("caption");
   captionText.innerHTML = element.alt;
 }
+
+//send email
+$(document).ready(function() {
+    $('#sendEmail').click(function() {
+        $('#emailForm').attr('action',
+                       'mailto:johnpindel@gmail.com?subject=' +
+                       $('#theirName').val() + '&body=' + $('#theirMessage').val());
+        $('#emailForm').submit();
+    });
+});
+
 
 // Change style of navbar on scroll
 window.onscroll = function() {myFunction()};
